@@ -1,0 +1,43 @@
+{
+    "env": {
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2017,
+        "sourceType": "script"
+    },
+    "rules": {
+        "array-bracket-spacing": [ "error", "always" ],
+        "block-spacing": "error",
+        "constructor-super": "warn",
+        "indent": [ "error", 4, {
+            "SwitchCase": 1
+        } ],
+        "no-const-assign": "error",
+        "no-extra-semi": [ "error" ],
+        "no-multiple-empty-lines": [ "error", {
+            "max": 1,
+            "maxEOF": 1
+        } ],
+        "no-this-before-super": "error",
+        "no-undef": "error",
+        "no-unreachable": "warn",
+        "no-unused-vars": "warn",
+        "no-use-before-define": [
+            "error",
+            {
+                "functions": false
+            }
+        ],
+        "prefer-const": "error",
+        "quotes": [ "warn", "single" ],
+        "semi": "error",
+        "space-in-parens": [ "error", "always" ],
+        "space-infix-ops": [ "error", {
+            "int32Hint": false
+        } ],
+        "valid-typeof": "warn"
+    }
+}
