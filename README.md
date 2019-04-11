@@ -11,19 +11,19 @@ stored/searched. You can also use UniQL to execute the same query against multip
 For example:
 
 ```javascript
-var parse = require( 'uniql' );
-var mongoCompile = require( 'uniql-mongodb' );
-var esCompile = require( 'uniql-es' );
+const parse = require( 'uniql' );
+const mongoCompile = require( 'uniql-mongodb' );
+const esCompile = require( 'uniql-es' );
 
 // parse a uniql query into an AST
-var queryAST = parse( '( height <= 20 or ( favorites.color == "green" and height != 25 ) ) and firstname ~= "o.+"' );
+const queryAST = parse( '( height <= 20 or ( favorites.color == "green" and height != 25 ) ) and firstname ~= "o.+"' );
 
 // using that AST, compile a mongodb query
-var mongoQuery = mongoCompile( queryAST );
+const mongoQuery = mongoCompile( queryAST );
 console.log( util.inspect( mongoQuery, { depth: null } ) );
 
 // using the same AST, compile an elasticsearch query
-var esQuery = esCompile( queryAST );
+const esQuery = esCompile( queryAST );
 console.log( util.inspect( esQuery, { depth: null } ) );
 ```
 
